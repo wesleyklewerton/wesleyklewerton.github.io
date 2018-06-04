@@ -1,0 +1,43 @@
+- baixar a proteum em www.inf.ufpr.br/wesleyk
+- Neste caso foi decompactado em "/opt"
+- Adicionar variáveis de Ambiente:
+    export PATH=${PATH}:/opt/proteum1.4.1/bin
+    export PROTEUM14HOME=/opt/proteum1.4.1/bin
+- Entrar na pasta "/opt/proteum1.4.1/bin/interface"
+    executar ./proteum
+- Criar uma pasta na home com o arquivo getcmd.c
+- Compilar o arquivo getcmd.c com o comando: "gcc -o executavel getcmd.c"
+- Criar uma nova seção de teste
+    Directory: indicar o caminho para a pasta com o getcmd
+    Program Test Name: qualquer nome para testar
+    Source Program: arquivo fonte
+    Executable Programa: executável gerado
+    Compilation Command: gcc -o executavel getcmd.c
+- Gerar mutantes
+    Colocar 100% e aplicar padrão para todas as categorias de operadores
+- Adicionar Casos de Teste
+- Executar Mutantes
+- Visualizar Status e Relatório 
+
+
+export PATH=${PATH}:/opt/proteum1.4.1/bin:./:/home/wesley/proteum/script
+export PROTEUM14HOME=/opt/proteum1.4.1/bin
+
+-----------------------------------------------------------------------------------------------------
+
+1 criei uma nova sessão, nome diferente para o programa executável
+2 adicionei casos de teste
+3 gerei os 907 mutantes utilizando todas as opções da ferramenta e com valor para cada operador = 100
+4 antes da execução verifiquei o status, não havia nenhum mutante classificado como anómalo
+5 executei os 907 mutantes
+6 no status os mutantes foram considerados anómalos
+
+-----------------------------------------------------------------------------------------------------
+
+Mutante Equivalente: quando o mutatante tem o mesmo comportamento do programa original.
+
+Mutante Anômalo: quando o operador de mutação introduz um erro de compliação, por exemplo, um programa 
+que tinha uma divisão 1/2, depois da mutação ficar 1/0 não vai compilar, pois não existe divisão por 0, 
+neste caso tem que marcar como anômalo.
+
+-----------------------------------------------------------------------------------------------------
