@@ -3,15 +3,10 @@
 <title>Triangle</title>
 <script language="Javascript" type="text/javascript">
 function checkinputs() {
-	/* Input Fields */
 	inp1 = parseInt(document.Triangle_Inputs.input1.value);
 	inp2 = parseInt(document.Triangle_Inputs.input2.value);
 	inp3 = parseInt(document.Triangle_Inputs.input3.value);
-	/* 
-	alert(inp1);
-	alert(inp2);
-	alert(inp3);*/
-	
+
 	if (((inp1+inp2)>inp3) && ((inp2+inp3)>inp1) && ((inp3+inp1)>inp2)) {
 
 	    if ((inp1 == inp2) && (inp2 == inp3)) {
@@ -28,7 +23,6 @@ function checkinputs() {
 		document.getElementById('output').innerHTML = "Not valid triangle";
 	  	//alert("not valid triangle");
 	}
-
 }
 </script>
 
