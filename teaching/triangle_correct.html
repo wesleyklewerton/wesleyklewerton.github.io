@@ -7,21 +7,24 @@ function checkinputs() {
 	inp2 = parseInt(document.Triangle_Inputs.input2.value);
 	inp3 = parseInt(document.Triangle_Inputs.input3.value);
 
-	if (((inp1+inp2)>inp3) && ((inp2+inp3)>inp1) && ((inp3+inp1)>inp2)) {
-
-	    if ((inp1 == inp2) && (inp2 == inp3)) {
-			//alert("Equalateral");
-			document.getElementById('output').innerHTML = "Equilateral";
-		} else if ((inp1 != inp2) && (inp2 != inp3 && (inp1 != inp3))) {
-			//alert("Scalene");
-			document.getElementById('output').innerHTML = "Scalene";
-		} else {
-			//alert("Isosceles");
-			document.getElementById('output').innerHTML = "Isosceles";
-		}
-	} else {
+	if ( (inp1 < 1) || (inp1 > 200) || (inp2 < 1) || (inp2 > 200) || (inp3 < 1) || (inp3 > 200) ){
 		document.getElementById('output').innerHTML = "Not valid triangle";
-	  	//alert("not valid triangle");
+	} else {
+		if (((inp1+inp2)>inp3) && ((inp2+inp3)>inp1) && ((inp3+inp1)>inp2)) {
+			if ((inp1 == inp2) && (inp2 == inp3)) {
+				//alert("Equalateral");
+				document.getElementById('output').innerHTML = "Equilateral";
+			} else if ((inp1 != inp2) && (inp2 != inp3 && (inp1 != inp3))) {
+				//alert("Scalene");
+				document.getElementById('output').innerHTML = "Scalene";
+			} else {
+				//alert("Isosceles");
+				document.getElementById('output').innerHTML = "Isosceles";
+			}
+		} else {
+			document.getElementById('output').innerHTML = "Not valid triangle";
+		  	//alert("not valid triangle");
+		}
 	}
 }
 </script>
